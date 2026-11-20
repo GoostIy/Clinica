@@ -4,7 +4,7 @@
 //
 // Todo lo elegido viaja en campos ocultos del formulario: funciona aunque
 // el navegador no tenga JavaScript y nada se pierde si algo sale mal.
-require __DIR__ . '/lib/auth.php';
+require __DIR__ . '/../lib/auth.php';
 
 exigir('agendar');
 

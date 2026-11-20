@@ -1,11 +1,11 @@
 /* ClinAgenda · service worker.
-   Va en la raíz para que cubra todo el sistema. Hace dos cosas:
+   Va en pantallas/, junto a las páginas, para que las cubra a todas. Hace dos cosas:
    - guarda una copia de los estilos, el JavaScript y el ícono, para que todo se vea bien sin red,
    - guarda la última versión de cada pantalla visitada, por si el servidor no responde.
    Las citas sin conexión no pasan por aquí: las maneja assets/app.js. */
 var ESTATICOS = 'clinagenda-v1';
 var PAGINAS = 'clinagenda-paginas';
-var ARCHIVOS = ['assets/estilos.css', 'assets/app.js', 'assets/icono.svg', 'assets/manifest.json'];
+var ARCHIVOS = ['../assets/estilos.css', '../assets/app.js', '../assets/icono.svg', '../assets/manifest.json'];
 
 self.addEventListener('install', function (ev) {
   ev.waitUntil(caches.open(ESTATICOS).then(function (c) { return c.addAll(ARCHIVOS); }));
@@ -34,7 +34,7 @@ self.addEventListener('fetch', function (ev) {
       return caches.match(r).then(function (guardada) {
         return guardada || new Response(
           '<!DOCTYPE html><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">' +
-          '<link rel="stylesheet" href="assets/estilos.css"><main class="sin-nav"><div class="tarjeta"><div class="vacio">' +
+          '<link rel="stylesheet" href="../assets/estilos.css"><main class="sin-nav"><div class="tarjeta"><div class="vacio">' +
           '<h1>No hay conexión con el sistema</h1><p>Esta pantalla no se había abierto antes en este equipo.' +
           ' Vuelva a la anterior: las citas que guarde se quedan aquí y se envían cuando vuelva la conexión.</p>' +
           '<p><a class="btn" href="javascript:history.back()">Volver</a></p></div></div></main>',

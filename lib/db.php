@@ -9,7 +9,8 @@ date_default_timezone_set('America/Guayaquil');
 mb_internal_encoding('UTF-8');
 
 // Los errores técnicos van a un archivo, no a la pantalla.
-const ARCHIVO_ERRORES = __DIR__ . '/../errores.log';
+const ARCHIVO_ERRORES = __DIR__ . '/../registro/errores.log';
+if (!is_dir(dirname(ARCHIVO_ERRORES))) @mkdir(dirname(ARCHIVO_ERRORES), 0775, true);
 ini_set('display_errors', '0');
 ini_set('log_errors', '1');
 ini_set('error_log', ARCHIVO_ERRORES);
@@ -30,7 +31,7 @@ set_exception_handler(function (Throwable $e): void {
     }
     echo '<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">'
        . '<meta name="viewport" content="width=device-width, initial-scale=1">'
-       . '<title>ClinAgenda</title><link rel="stylesheet" href="assets/estilos.css"></head>'
+       . '<title>ClinAgenda</title><link rel="stylesheet" href="../assets/estilos.css"></head>'
        . '<body><main class="sin-nav"><div class="tarjeta"><div class="vacio">'
        . '<h1>' . $titulo . '</h1><p>' . $texto . '</p>'
        . '<p><a class="btn" href="inicio.php">Volver al inicio</a></p>'

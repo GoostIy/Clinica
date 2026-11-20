@@ -2,7 +2,7 @@
 // Administración: cuentas, médicos y feriados. Todo lo que se cambia aquí
 // son datos, no código: si la clienta cambia de idea, se resuelve desde esta
 // pantalla sin tocar el programa.
-require __DIR__ . '/lib/auth.php';
+require __DIR__ . '/../lib/auth.php';
 
 $seccion = in_array($_GET['s'] ?? '', ['usuarios', 'medicos', 'feriados'], true) ? $_GET['s'] : 'usuarios';
 exigir($seccion === 'usuarios' ? 'gestionar_usuarios' : 'gestionar_catalogos');

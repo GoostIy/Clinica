@@ -1,7 +1,7 @@
 <?php
 // Manual de uso, escrito para alguien que nunca usó un sistema.
 // Se puede abrir sin haber entrado.
-require __DIR__ . '/lib/auth.php';
+require __DIR__ . '/../lib/auth.php';
 
 $u = usuario_actual();
 cabecera('Manual de uso', ['volver' => $u ? 'inicio.php' : 'index.php']);

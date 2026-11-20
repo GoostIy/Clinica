@@ -1,6 +1,6 @@
 # Probar ClinAgenda en cinco minutos
 
-Primero arránquelo como dice el [README](README.md). Después, siga estos pasos en orden.
+Primero arránquelo como dice el [README](../README.md). Después, siga estos pasos en orden.
 
 ## Las cuentas
 

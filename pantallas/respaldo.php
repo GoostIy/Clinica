@@ -2,7 +2,7 @@
 // Respaldo: descarga toda la base en un archivo .sql que se puede volver a
 // cargar en phpMyAdmin. Se arma con PHP, sin depender de mysqldump, para
 // que funcione igual en cualquier XAMPP.
-require __DIR__ . '/lib/auth.php';
+require __DIR__ . '/../lib/auth.php';
 
 exigir('respaldo');
 

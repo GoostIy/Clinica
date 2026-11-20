@@ -24,9 +24,9 @@ function cabecera(string $titulo, array $op = []): void
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0f6b64">
 <title><?= h($titulo) ?> · ClinAgenda</title>
-<link rel="icon" href="assets/icono.svg" type="image/svg+xml">
-<link rel="manifest" href="assets/manifest.json">
-<link rel="stylesheet" href="assets/estilos.css">
+<link rel="icon" href="../assets/icono.svg" type="image/svg+xml">
+<link rel="manifest" href="../assets/manifest.json">
+<link rel="stylesheet" href="../assets/estilos.css">
 <?php if ($u): ?><meta name="csrf" content="<?= h(csrf()) ?>"><?php endif; ?>
 </head>
 <body class="<?= modo_simple() ? 'simple' : '' ?>">
@@ -96,7 +96,7 @@ function pie(array $op = []): void
 </nav>
 <?php endif; ?>
 
-<script src="assets/app.js"></script>
+<script src="../assets/app.js"></script>
 </body>
 </html>
 <?php

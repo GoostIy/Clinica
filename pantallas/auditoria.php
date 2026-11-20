@@ -1,7 +1,7 @@
 <?php
 // Auditoría: quién hizo qué y cuándo. Solo la ven la doctora y la administración.
 // Esta pantalla solo lee: no hay forma de cambiar ni borrar una línea.
-require __DIR__ . '/lib/auth.php';
+require __DIR__ . '/../lib/auth.php';
 
 exigir('ver_auditoria');
 

@@ -1,7 +1,7 @@
 <?php
 // Agenda del día: ver las citas, cancelar con motivo, deshacer, marcar
 // atendida o no asistió, e imprimir la hoja del día para el plan en papel.
-require __DIR__ . '/lib/auth.php';
+require __DIR__ . '/../lib/auth.php';
 
 exigir('ver_agenda');
 

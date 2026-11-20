@@ -2,7 +2,7 @@
 // Inicio. Todas las personas entran a esta misma pantalla de cuadros; lo que
 // cambia es cuáles ve cada una según lo que su rol le permite hacer. La
 // pantalla sencilla no cambia los cuadros, cambia su tamaño.
-require __DIR__ . '/lib/auth.php';
+require __DIR__ . '/../lib/auth.php';
 
 exigir_login();
 

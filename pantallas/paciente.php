@@ -2,7 +2,7 @@
 // Ficha de un paciente, y el formulario para registrarlo o corregir sus datos.
 // Regla de oro: si algo está mal, el formulario vuelve con todo lo que la
 // persona ya escribió, el campo marcado en rojo y el mensaje debajo.
-require __DIR__ . '/lib/auth.php';
+require __DIR__ . '/../lib/auth.php';
 
 exigir('ver_pacientes');
 

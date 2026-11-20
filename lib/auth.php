@@ -1,6 +1,6 @@
 <?php
-// Sesión, roles y permisos. Todas las páginas empiezan con
-//     require __DIR__ . '/lib/auth.php';
+// Sesión, roles y permisos. Todas las pantallas (carpeta pantallas/) empiezan con
+//     require __DIR__ . '/../lib/auth.php';
 // y desde aquí se carga el resto de lib/.
 
 declare(strict_types=1);

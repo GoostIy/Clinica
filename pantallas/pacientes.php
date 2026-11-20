@@ -1,6 +1,6 @@
 <?php
 // Buscar pacientes.
-require __DIR__ . '/lib/auth.php';
+require __DIR__ . '/../lib/auth.php';
 
 exigir('ver_pacientes');
 
