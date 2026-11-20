@@ -13,8 +13,6 @@ está hecho así, y qué quedó fuera, está en [docs/DECISIONES.md](docs/DECISI
 
 ## Cómo arrancarlo
 
-### Con un XAMPP ya instalado
-
 1. Copie la carpeta `clinagenda` dentro de `C:\xampp\htdocs\`.
 2. En el panel de XAMPP, encienda **Apache** y **MySQL**.
 3. Abra <http://localhost/clinagenda/>.
@@ -28,24 +26,6 @@ póngala ahí. Ese archivo no se sube al repositorio.
 
 Para volver a los datos de demostración, borre la base `clinagenda` en phpMyAdmin y
 recargue la página: se vuelve a crear.
-
-### Con XAMPP portable (doble clic, sin instalar nada)
-
-Es como se entrega en USB o ZIP. La carpeta queda así:
-
-```
-ClinAgenda/
-  ClinAgenda.bat      lo copia de portable/
-  DETENER.bat         lo copia de portable/
-  runtime/            XAMPP portable (Apache + PHP + MySQL)
-    htdocs/clinagenda/   este repositorio
-```
-
-Doble clic en `ClinAgenda.bat`: enciende Apache y MySQL, espera unos segundos y abre el
-navegador. `DETENER.bat` los apaga. Si quieren que se vea como un programa, los dos `.bat`
-se pueden convertir a `.exe` con Bat To Exe Converter.
-
-La carpeta `runtime/` pesa cientos de megas y no se sube a GitHub (está en `.gitignore`).
 
 Use Apache y no el servidor de prueba de PHP (`php -S`): en Windows ese servidor atiende
 un pedido a la vez y la prueba de dos recepcionistas guardando al mismo tiempo no sería real.
@@ -84,7 +64,6 @@ clinagenda/
   assets/            estilos.css, app.js, icono.svg, manifest.json
   config/            local.example.php
   sql/               01_esquema.sql y 02_datos_demo.sql
-  portable/          ClinAgenda.bat y DETENER.bat
   docs/              DECISIONES.md e INSTRUCCIONES.md
   registro/          errores.log; se crea solo y no se sube al repositorio
 ```
