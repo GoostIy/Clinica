@@ -53,7 +53,8 @@ cabecera('Respaldo', ['volver' => 'inicio.php']);
      Guárdela fuera de esta computadora, por ejemplo en una memoria USB.</p>
   <p class="suave">Para recuperarla: en phpMyAdmin, elija la base <code>clinagenda</code>, entre a
      <em>Importar</em> y cargue el archivo. También se puede abrir en Excel para sacar reportes.</p>
-  <form method="post" action="respaldo.php">
+  <?php /* data-descarga: la app de Android lo usa para guardar el archivo en el teléfono. */ ?>
+  <form method="post" action="respaldo.php" data-descarga>
     <?= campo_csrf() ?>
     <button class="btn ancho" type="submit"><?= icono('respaldo') ?> Descargar el respaldo</button>
   </form>
